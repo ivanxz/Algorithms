@@ -11,23 +11,27 @@ class Solution {
 public:
     static int removeDuplicates(vector<int>& nums) {
         auto n = nums.size();
-        if(n == 0) return 0;
+        if (n == 0) return 0;
 
-        int i = 0, j = 0;
-        while (j < n) {
-            if(nums[i] < nums[j]) {
-                nums[++i] = nums[j++];
+        int j = 1, count = 1;
+        for (int i = 1; i < n; ++i) {
+            if(nums[i] == nums[i - 1]){
+                count++;
             } else {
-                j++;
+                count = 1;
+            }
+
+            if(count <= 2) {
+                nums[j++] = nums[i];
             }
         }
 
-        return i + 1;
+        return j;
     }
 };
 
 int main(int argc, char *argv[]) {
-    vector<int> nums = {0,0,1,1,1,2,2,3,3,4};
+    vector<int> nums = {1,1,1,2,2,3};
     int len = Solution::removeDuplicates(nums);
     cout << len << endl;
 

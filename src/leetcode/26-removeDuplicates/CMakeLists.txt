@@ -1,5 +1,5 @@
-# 9999-template CMakeLists.txt
+# 26-removeDuplicates CMakeLists.txt
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 set(SOURCE_FILES main.cpp)
-add_executable(template ${SOURCE_FILES})
+add_executable(26-removeDuplicates ${SOURCE_FILES})

@@ -13,8 +13,6 @@ public:
 };
 
 int main(int argc, char *argv[]) {
-    Solution solution;
-
     cout << endl;
     return 0;
 }

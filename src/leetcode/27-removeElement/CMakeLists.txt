@@ -2,4 +2,4 @@
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 set(SOURCE_FILES main.cpp)
-add_executable(removeElement ${SOURCE_FILES})
+add_executable(27-removeElement ${SOURCE_FILES})

@@ -9,7 +9,7 @@ using namespace std;
 
 class Solution {
 public:
-    int removeElement(vector<int>& nums, int val) {
+    static int removeElement(vector<int>& nums, int val) {
         int l = 0, r = nums.size() - 1;
         while (r >= l) {
             if(nums[l] == val)
@@ -23,10 +23,9 @@ public:
 };
 
 int main(int argc, char *argv[]) {
-    Solution solution;
     vector<int> nums = {3,2,2,3};
     int val = 3;
-    int len = solution.removeElement(nums, val);
+    int len = Solution::removeElement(nums, val);
     cout << len << endl;
 
     for (int i = 0; i < len; ++i) {
