@@ -11,3 +11,9 @@ add_subdirectory(26-removeDuplicates)
 
 # 80. 删除排序数组中的重复项 II
 add_subdirectory(80-removeDuplicates)
+
+# 75. 颜色分类
+add_subdirectory(75-sortColors)
+
+# 167. 两数之和 II - 输入有序数组
+add_subdirectory(167-twoSum)
