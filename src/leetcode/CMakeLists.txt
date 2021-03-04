@@ -18,5 +18,7 @@ add_subdirectory(75-sortColors)
 # 88. 合并两个有序数组
 add_subdirectory(88-merge)
 
+add_subdirectory(215-findKthLargest)
+
 # 167. 两数之和 II - 输入有序数组
 add_subdirectory(167-twoSum)
