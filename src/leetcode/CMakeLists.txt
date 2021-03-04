@@ -23,3 +23,6 @@ add_subdirectory(215-findKthLargest)
 
 # 167. 两数之和 II - 输入有序数组
 add_subdirectory(167-twoSum)
+
+# 125. 验证回文串
+add_subdirectory(125-isPalindrome)
