@@ -32,3 +32,6 @@ add_subdirectory(344-reverseString)
 
 # 345. 反转字符串中的元音字母
 add_subdirectory(345-reverseVowels)
+
+# 11. 盛最多水的容器
+add_subdirectory(11-maxArea)
