@@ -9,7 +9,13 @@
 # 203， 82， 21， 24， 25， 147， 148
 
 # 特殊情况改变节点的值
-# 237
+# 237,
 
 # 链表与双指针
 # 19， 61， 143， 234
+
+# 206. 反转链表
+add_subdirectory(206-reverseList)
+
+# 92. 反转链表 II
+add_subdirectory(92-reverseBetween)
