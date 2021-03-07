@@ -19,3 +19,6 @@ add_subdirectory(206-reverseList)
 
 # 92. 反转链表 II
 add_subdirectory(92-reverseBetween)
+
+# 83. 删除排序链表中的重复元素
+add_subdirectory(83-deleteDuplicates)
