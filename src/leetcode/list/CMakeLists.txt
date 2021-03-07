@@ -22,3 +22,6 @@ add_subdirectory(92-reverseBetween)
 
 # 83. 删除排序链表中的重复元素
 add_subdirectory(83-deleteDuplicates)
+
+# 86. 分隔链表
+add_subdirectory(86-partition)
