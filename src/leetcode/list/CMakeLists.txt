@@ -28,3 +28,6 @@ add_subdirectory(86-partition)
 
 # 328. 奇偶链表
 add_subdirectory(328-oddEvenList)
+
+# 2. 两数相加
+add_subdirectory(2-addTwoNumbers)
