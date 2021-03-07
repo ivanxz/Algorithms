@@ -31,3 +31,6 @@ add_subdirectory(328-oddEvenList)
 
 # 2. 两数相加
 add_subdirectory(2-addTwoNumbers)
+
+# 445. 两数相加 II
+add_subdirectory(445-addTwoNumbers)
