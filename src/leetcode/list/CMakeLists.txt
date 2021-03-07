@@ -34,3 +34,6 @@ add_subdirectory(2-addTwoNumbers)
 
 # 445. 两数相加 II
 add_subdirectory(445-addTwoNumbers)
+
+# 203. 移除链表元素
+add_subdirectory(203-removeElements)
