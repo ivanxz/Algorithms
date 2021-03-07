@@ -25,3 +25,6 @@ add_subdirectory(83-deleteDuplicates)
 
 # 86. 分隔链表
 add_subdirectory(86-partition)
+
+# 328. 奇偶链表
+add_subdirectory(328-oddEvenList)
