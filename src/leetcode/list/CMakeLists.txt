@@ -37,3 +37,6 @@ add_subdirectory(445-addTwoNumbers)
 
 # 203. 移除链表元素
 add_subdirectory(203-removeElements)
+
+# 82. 删除排序链表中的重复元素 II
+add_subdirectory(82-deleteDuplicates)
