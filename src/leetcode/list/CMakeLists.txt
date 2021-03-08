@@ -43,3 +43,6 @@ add_subdirectory(82-deleteDuplicates)
 
 # 21. 合并两个有序链表
 add_subdirectory(21-mergeTwoLists)
+
+# 24. 两两交换链表中的节点
+add_subdirectory(24-swapPairs)
