@@ -46,3 +46,6 @@ add_subdirectory(21-mergeTwoLists)
 
 # 24. 两两交换链表中的节点
 add_subdirectory(24-swapPairs)
+
+# 25. K 个一组翻转链表
+add_subdirectory(25-reverseKGroup)
