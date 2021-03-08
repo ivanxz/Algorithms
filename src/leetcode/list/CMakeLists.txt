@@ -52,3 +52,9 @@ add_subdirectory(25-reverseKGroup)
 
 # 147. 对链表进行插入排序
 add_subdirectory(147-insertionSortList)
+
+# 148. 排序链表
+add_subdirectory(148-sortList)
+
+# 237. 删除链表中的节点
+add_subdirectory(237-deleteNode)

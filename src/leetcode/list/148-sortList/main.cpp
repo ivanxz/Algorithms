@@ -45,7 +45,7 @@ void printListNode(ListNode *head) {
 void deleteListNode(ListNode *head) {
     ListNode *curNode = head;
     while (curNode != nullptr) {
-        ListNode *delNode = curNode;
+        ListNode* delNode = curNode;
         curNode = curNode->next;
         delete delNode;
     }
@@ -53,37 +53,30 @@ void deleteListNode(ListNode *head) {
 
 class Solution {
 public:
-    ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
-        ListNode *dummyNode = new ListNode(-1);
+    ListNode *sortList(ListNode *head) {
+        if (head == nullptr) return head;
 
-        ListNode *curNode = dummyNode;
-        while (l1 != nullptr && l2 != nullptr) {
-            if (l1->val < l2->val) {
-                curNode->next = l1;
-                l1 = l1->next;
-            } else {
-                curNode->next = l2;
-                l2 = l2->next;
-            }
+        ListNode* dummyNode = new ListNode(-1);
+        dummyNode->next = head;
 
-            curNode = curNode->next;
+        ListNode *tailNode = head;
+        ListNode *curNode = head->next;
+        while (curNode != nullptr) {
+
         }
 
-        curNode->next = l1 == nullptr ? l2 : l1;
         return dummyNode->next;
     }
 };
 
 int main(int argc, char *argv[]) {
-    int l1[] = {1, 2, 4};
-    int l2[] = {1, 3, 4};
+    int arr[] = {4, 2, 1, 3};
+    int n = sizeof(arr) / sizeof(int);
 
-    ListNode *head1 = createListNode(l1, 3);
-    printListNode(head1);
-    ListNode *head2 = createListNode(l2, 3);
-    printListNode(head2);
+    ListNode *head = createListNode(arr, n);
+    printListNode(head);
 
-    ListNode *retNode = Solution().mergeTwoLists(head1, head2);
+    ListNode *retNode = Solution().sortList(head);
     printListNode(retNode);
 
     deleteListNode(retNode);

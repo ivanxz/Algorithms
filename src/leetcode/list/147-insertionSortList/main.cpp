@@ -45,7 +45,7 @@ void printListNode(ListNode *head) {
 void deleteListNode(ListNode *head) {
     ListNode *curNode = head;
     while (curNode != nullptr) {
-        ListNode* delNode = curNode;
+        ListNode *delNode = curNode;
         curNode = curNode->next;
         delete delNode;
     }
@@ -56,25 +56,25 @@ public:
     ListNode *insertionSortList(ListNode *head) {
         if (head == nullptr) return head;
 
-        ListNode* dummyNode = new ListNode(-1);
+        ListNode *dummyNode = new ListNode(-1);
         dummyNode->next = head;
 
-        ListNode *sortNode = head;
-        ListNode *curNode = head->next;
+        ListNode *tailNode = head;          // tailNode指向已排好序部分的尾结点
+        ListNode *curNode = head->next;     // curNode是下一个待排序的结点
         while (curNode != nullptr) {
-           if (sortNode->val <= curNode->val) {
-               sortNode = sortNode->next;
-           } else {
-               ListNode *preNode = dummyNode;
-               while (preNode->next->val <= curNode->val) {
-                   preNode = preNode->next;
-               }
-               sortNode->next = curNode->next;
-               curNode->next = preNode->next;
-               preNode->next = curNode;
-           }
+            if (curNode->val < tailNode->val) {
+                ListNode *posNode = dummyNode; // 定义一个pos指针，用于每次从头（dummy处）寻找该插入cur的结点的位置。比如1->3，cur是2，那pos就在1处。
+                while (posNode->next->val <
+                       curNode->val) { posNode = posNode->next; } // 将pos定位到已排好序的且比cur小的部分中的最大的那个结点。posNode= -1 -> 4 -> 2 -> 1 -> 3 -> NULL
+                tailNode->next = curNode->next; // 断链。比如dummy->4->2->1->3，tail是4，cur是2，则让4->1，把2拎出来。tailNode= 4 -> 1 -> 3 -> NULL
+                curNode->next = posNode->next;  // pos此时在dummy处（因为4大于2），则让 2->4。curNode= 2 -> 4 -> 1 -> 3 -> NULL
+                posNode->next = curNode;    // 上一步相当于断掉了dummy->4，现在重新接起来。posNode= -1 -> 2 -> 4 -> 1 -> 3 -> NULL
 
-           curNode = sortNode->next;
+                curNode = tailNode->next;   // 让cur重新回到下一个待排序的结点处
+            } else {
+                tailNode = tailNode->next;
+                curNode = curNode->next;
+            }
         }
 
         return dummyNode->next;
