@@ -49,3 +49,6 @@ add_subdirectory(24-swapPairs)
 
 # 25. K 个一组翻转链表
 add_subdirectory(25-reverseKGroup)
+
+# 147. 对链表进行插入排序
+add_subdirectory(147-insertionSortList)
