@@ -58,3 +58,15 @@ add_subdirectory(148-sortList)
 
 # 237. 删除链表中的节点
 add_subdirectory(237-deleteNode)
+
+# 19. 删除链表的倒数第 N 个结点
+add_subdirectory(19-removeNthFromEnd)
+
+# 61. 旋转链表
+add_subdirectory(61-rotateRight)
+
+# 143. 重排链表
+add_subdirectory(143-reorderList)
+
+# 234. 回文链表
+add_subdirectory(234-isPalindrome)
