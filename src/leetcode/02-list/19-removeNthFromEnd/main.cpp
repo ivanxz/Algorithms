@@ -54,7 +54,21 @@ void deleteListNode(ListNode *head) {
 class Solution {
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n) {
+        ListNode *dummyNode = new ListNode(-1, head);
 
+        ListNode *fast = head;
+        ListNode *slow = dummyNode;
+        for (int i = 0; i < n; ++i) {
+            fast = fast->next;
+        }
+
+        while (fast != nullptr) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+
+        slow->next = slow->next->next;
+        return dummyNode->next;
     }
 };
 
