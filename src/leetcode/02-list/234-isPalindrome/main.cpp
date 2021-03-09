@@ -54,17 +54,55 @@ void deleteListNode(ListNode *head) {
 class Solution {
 public:
     bool isPalindrome(ListNode *head) {
-        vector<int> vec;
-        while (head != nullptr) {
-            vec.push_back(head->val);
-            head = head->next;
+//
+//        // 使用栈性能极差
+//        vector<int> vec;
+//        while (head != nullptr) {
+//            vec.push_back(head->val);
+//            head = head->next;
+//        }
+//
+//        int l = 0, r = (int)vec.size() - 1;
+//        while (l < r) {
+//            if(vec[l++] != vec[r--]) {
+//                return false;
+//            }
+//        }
+//
+//        return true;
+
+        // 快慢双指针
+        if (head == nullptr || head->next == nullptr) {
+            return true;
         }
 
-        int l = 0, r = (int)vec.size() - 1;
-        while (l < r) {
-            if(vec[l++] != vec[r--]) {
+        // 定义快慢两个指针
+        ListNode *fast = head;
+        ListNode *slow = head;
+
+        ListNode *first = new ListNode(-1);
+        ListNode *temp;
+        // 找中点的时候完成交换
+        while (fast != nullptr && fast->next != nullptr) {
+            fast = fast->next->next;
+            temp = slow->next;
+            slow->next = first->next;
+            first->next = slow;
+            slow = temp;
+        }
+
+        // 奇数个链表
+        if (fast != nullptr) {
+            slow = slow->next;
+        }
+
+        while (slow != nullptr) {
+            if (slow->val != first->next->val) {
                 return false;
             }
+
+            slow = slow->next;
+            first = first->next;
         }
 
         return true;
