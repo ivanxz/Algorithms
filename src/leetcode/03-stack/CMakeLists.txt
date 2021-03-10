@@ -11,3 +11,6 @@ add_subdirectory(20-isValid)
 
 # 150. 逆波兰表达式求值
 add_subdirectory(150-evalRPN)
+
+# 71. 简化路径
+add_subdirectory(71-simplifyPath)
