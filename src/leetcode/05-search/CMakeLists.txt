@@ -1,4 +1,4 @@
-# search CMakeLists.txt
+# 05-search CMakeLists.txt
 
 # 349. 两个数组的交集
 add_subdirectory(349-intersection)
