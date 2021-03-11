@@ -1,5 +1,5 @@
-# 205-isIsomorphic CMakeLists.txt
+# 202-isHappy CMakeLists.txt
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 set(SOURCE_FILES main.cpp)
-add_executable(205-isIsomorphic ${SOURCE_FILES})
+add_executable(202-isHappy ${SOURCE_FILES})
