@@ -1,4 +1,4 @@
-# recursion CMakeLists.txt
+# 06-recursion CMakeLists.txt
 
 # 递归与回溯法（树形问题）
 # 17, 93， 131，

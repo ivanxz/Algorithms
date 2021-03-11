@@ -1,4 +1,4 @@
-# greedy CMakeLists.txt
+# 09-greedy CMakeLists.txt
 
 # 贪心算法
 # 455, 392
