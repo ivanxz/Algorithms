@@ -4,12 +4,13 @@
 
 #include <iostream>
 #include <vector>
+#include <unordered_set>
 
 using namespace std;
 
 class Solution {
 public:
-    static bool isIsomorphic(string s, string t) {
+    bool isIsomorphic(string s, string t) {
 
     }
 };
