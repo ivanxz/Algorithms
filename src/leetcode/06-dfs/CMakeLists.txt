@@ -1,4 +1,4 @@
-# 06-recursion CMakeLists.txt
+# 06-dfs CMakeLists.txt
 
 # 递归与回溯法（树形问题）
 # 17, 93， 131，
@@ -15,3 +15,5 @@
 # 回溯法---解决经典人工智能问题
 # 51， 52， 37
 
+# 1688. 比赛中的配对次数
+add_subdirectory(1688-numberOfMatches)
