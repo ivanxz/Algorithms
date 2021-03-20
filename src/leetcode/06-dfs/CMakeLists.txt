@@ -17,3 +17,39 @@
 
 # 1688. 比赛中的配对次数
 add_subdirectory(1688-numberOfMatches)
+
+# 17. 电话号码的字母组合
+add_subdirectory(17-letterCombinations)
+
+# 93. 复原 IP 地址
+add_subdirectory(93-restoreIpAddresses)
+
+# 131. 分割回文串
+add_subdirectory(131-partition)
+
+# 46. 全排列
+add_subdirectory(46-permute)
+
+# 47. 全排列 II
+add_subdirectory(47-permuteUnique)
+
+# 77. 组合
+add_subdirectory(77-combine)
+
+# 39. 组合总和
+add_subdirectory(39-combinationSum)
+
+# 40. 组合总和 II
+add_subdirectory(40-combinationSum2)
+
+# 216. 组合总和 III
+add_subdirectory(216-combinationSum3)
+
+# 78. 子集
+add_subdirectory(78-subsets)
+
+# 90. 子集 II
+add_subdirectory(90-subsetsWithDup)
+
+# 401. 二进制手表
+add_subdirectory(401-readBinaryWatch)

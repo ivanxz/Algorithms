@@ -4,43 +4,36 @@
 
 #include <iostream>
 #include <string>
-#include <unordered_map>
+#include <algorithm>
+#include <vector>
+#include <numeric>
+#include <tuple>
+
 using namespace std;
 
-int main()
-{
-    //创建空 umap 容器
-    unordered_map<string, string> umap;
+void quick_sort(auto begin, auto end) {
+    if (begin != end) {
+        auto pivot = *std::next(begin, std::distance(begin, end) / 2);
+        const auto[lt, gt] = ::partition(begin, end, pivot);
+        quick_sort(begin, lt);
+        quick_sort(gt, end);
+    }
+}
 
-    cout << "umap 初始桶数: " << umap.bucket_count() << endl;
-    cout << "umap 初始负载因子: " << umap.load_factor() << endl;
-    cout << "umap 最大负载因子: " << umap.max_load_factor() << endl;
+int main() {
+    std::vector<int> vec{5, 0, 1, 5, 3, 7, 4, 2};
+    //quick_sort(vec.begin(), vec.end());
+    std::for_each(vec.begin(), vec.end(), [](const int elem) { std::cout << elem << " "; });
+    cout << endl;
 
-    //设置 umap 使用最适合存储 9 个键值对的桶数
-    umap.reserve(3);
-    cout << "*********************" << endl;
-    cout << "umap 新桶数: " << umap.bucket_count() << endl;
-    cout << "umap 新负载因子: " << umap.load_factor() << endl;
-    //向 umap 容器添加 3 个键值对
-    umap["Python教程"] = "http://c.biancheng.net/python/";
-    umap["Java教程"] = "http://c.biancheng.net/java/";
-    umap["Linux教程"] = "http://c.biancheng.net/linux/";
-
-    umap["Python教程1"] = "http://c.biancheng.net/python/";
-    umap["Java教程1"] = "http://c.biancheng.net/java/";
-    umap["Linux教程1"] = "http://c.biancheng.net/linux/";
-
-    umap["Python教程2"] = "http://c.biancheng.net/python/";
-    umap["Java教程2"] = "http://c.biancheng.net/java/";
-    umap["Linux教程2"] = "http://c.biancheng.net/linux/";
-
-    cout << "*********************" << endl;
-    cout << "umap 新桶数: " << umap.bucket_count() << endl;
-    cout << "umap 新负载因子: " << umap.load_factor() << endl;
-    //调用 bucket() 获取指定键值对位于桶的编号
-    cout << "以\"Python教程\"为键的键值对，位于桶的编号为:" << umap.bucket("Python教程") << endl;
-    //自行计算某键值对位于哪个桶
-    auto fn = umap.hash_function();
-    cout << "计算以\"Python教程\"为键的键值对，位于桶的编号为：" << fn("Python教程") % (umap.bucket_count()) << endl;
+    std::vector<double> temperatures{65, 75, 56, 48, 31, 28, 32, 29, 40, 41, 44, 50};
+    std::copy(std::begin(temperatures), std::end(temperatures), std::ostream_iterator<double>{std::cout, " "});
+    std::cout << std::endl;
+    auto average = std::accumulate(std::begin(temperatures), std::end(temperatures), 0.0) / temperatures.size();
+    std::cout << "Average temperature: " << average << std::endl;
+    std::stable_partition(std::begin(temperatures), std::end(temperatures),
+                          [average](double t) { return t < average; });
+    std::copy(std::begin(temperatures), std::end(temperatures), std::ostream_iterator<double>{std::cout, " "});
+    std::cout << std::endl;
     return 0;
 }
