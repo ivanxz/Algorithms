@@ -14,3 +14,6 @@ add_subdirectory(331-isValidSerialization)
 
 # 705. 设计哈希集合
 add_subdirectory(705-MyHashSet)
+
+# 73. 矩阵置零
+add_subdirectory(73-setZeroes)

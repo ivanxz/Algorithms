@@ -9,10 +9,13 @@ using namespace std;
 
 class Solution {
 public:
+    int wiggleMaxLength(vector<int> &nums) {
 
+    }
 };
 
 int main(int argc, char *argv[]) {
-    cout << endl;
+    vector<int> nums{1, 7, 4, 9, 2, 5};
+    cout << Solution().wiggleMaxLength(nums) << endl;
     return 0;
 }

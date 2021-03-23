@@ -3,16 +3,17 @@
 //
 
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
+    int uniquePaths(int m, int n) {
 
+    }
 };
 
 int main(int argc, char *argv[]) {
-    cout << endl;
+    cout << Solution().uniquePaths(3, 7) << endl;
     return 0;
 }

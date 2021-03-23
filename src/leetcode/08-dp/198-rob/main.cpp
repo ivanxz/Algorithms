@@ -9,10 +9,13 @@ using namespace std;
 
 class Solution {
 public:
+    int rob(vector<int> &nums) {
 
+    }
 };
 
 int main(int argc, char *argv[]) {
-    cout << endl;
+    vector<int> nums{1, 2, 3, 1};
+    cout << Solution().rob(nums) << endl;
     return 0;
 }

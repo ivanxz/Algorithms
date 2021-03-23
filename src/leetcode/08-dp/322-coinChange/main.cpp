@@ -9,10 +9,13 @@ using namespace std;
 
 class Solution {
 public:
+    int coinChange(vector<int>& coins, int amount) {
 
+    }
 };
 
 int main(int argc, char *argv[]) {
-    cout << endl;
+    vector<int> coins{1, 2, 5};
+    cout << Solution().coinChange(coins, 11) << endl;
     return 0;
 }

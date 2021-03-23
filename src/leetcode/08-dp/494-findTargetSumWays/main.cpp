@@ -9,10 +9,13 @@ using namespace std;
 
 class Solution {
 public:
+    int findTargetSumWays(vector<int>& nums, int S) {
 
+    }
 };
 
 int main(int argc, char *argv[]) {
-    cout << endl;
+    vector<int> nums{1, 1, 1, 1, 1};
+    cout << Solution().findTargetSumWays(nums, 3) << endl;
     return 0;
 }

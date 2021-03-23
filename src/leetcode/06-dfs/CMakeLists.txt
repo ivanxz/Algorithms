@@ -10,7 +10,7 @@
 # 77， 39， 40， 216， 78， 90， 401
 
 # 二维平面的回溯法   floodfill算法
-# 79， 200，
+# 79， 200， 130, 417
 
 # 回溯法---解决经典人工智能问题
 # 51， 52， 37
@@ -53,3 +53,24 @@ add_subdirectory(90-subsetsWithDup)
 
 # 401. 二进制手表
 add_subdirectory(401-readBinaryWatch)
+
+# 79. 单词搜索
+add_subdirectory(79-exist)
+
+# 200. 岛屿数量
+add_subdirectory(200-numIslands)
+
+# 130. 被围绕的区域
+add_subdirectory(130-solve)
+
+# 417. 太平洋大西洋水流问题
+add_subdirectory(417-pacificAtlantic)
+
+# 51. N 皇后
+add_subdirectory(51-solveNQueens)
+
+# 52. N皇后 II
+add_subdirectory(52-totalNQueens)
+
+# 37. 解数独
+add_subdirectory(37-solveSudoku)

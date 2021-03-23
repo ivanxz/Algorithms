@@ -3,16 +3,17 @@
 //
 
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
+    int numDecodings(string s) {
 
+    }
 };
 
 int main(int argc, char *argv[]) {
-    cout << endl;
+    cout <<  Solution().numDecodings("12") <<endl;
     return 0;
 }
